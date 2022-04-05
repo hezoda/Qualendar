@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4ea6d6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <TabPane prefHeight="400.0" prefWidth="616.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Kezdőlap">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Üdvözöllek a&#10;Qualendar - Szolgálati naptár&#10;Vezető beosztású felületén.&#10;Kattints a megfelelő fülre a&#10;folytatáshoz.">
+                           <font>
+                              <Font name="Gentium Book Basic" size="28.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="14.0" layoutY="325.0" mnemonicParsing="false" style="-fx-background-color: #feec02;" text="Új alkalmazott hozzáadása">
+                           <font>
+                              <Font name="Gentium Book Basic Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Személyes adatok">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Alkalmazottak">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Szabadságkérelmek">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Táppénzkérelmek">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </left>
+</BorderPane>
