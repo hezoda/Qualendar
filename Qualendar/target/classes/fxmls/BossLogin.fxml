@@ -42,9 +42,9 @@
                   <Font name="Gentium Book Basic Italic" size="20.0" />
                </font>
             </Label>
-            <TextField layoutX="22.0" layoutY="108.0" prefHeight="26.0" prefWidth="355.0" promptText="Felhasználónév" />
-            <PasswordField layoutX="23.0" layoutY="187.0" prefHeight="26.0" prefWidth="355.0" promptText="Jelszó" />
-            <Button layoutX="139.0" layoutY="248.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #feec02;" text="Bejelentkezés">
+            <TextField fx:id="BossLoginUsername" layoutX="22.0" layoutY="108.0" prefHeight="26.0" prefWidth="355.0" promptText="Felhasználónév" />
+            <PasswordField fx:id="BossLoginPassword" layoutX="23.0" layoutY="187.0" prefHeight="26.0" prefWidth="355.0" promptText="Jelszó" />
+            <Button fx:id="BossLoginID" layoutX="139.0" layoutY="248.0" mnemonicParsing="false" onAction="#BossLogin" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #feec02;" text="Bejelentkezés">
                <font>
                   <Font name="Gentium Book Basic Bold" size="14.0" />
                </font>
