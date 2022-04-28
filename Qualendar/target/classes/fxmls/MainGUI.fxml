@@ -53,21 +53,6 @@
                         <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                      </image>
                   </ImageView>
-                  <Label fx:id="WorkerName" layoutX="104.0" layoutY="23.0" prefHeight="26.0" prefWidth="146.0">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="WorkerEmail" layoutX="104.0" layoutY="70.0" prefHeight="26.0" prefWidth="144.0">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="WorkerPosition" layoutX="95.0" layoutY="116.0" prefHeight="26.0" prefWidth="159.0">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Label>
                </children></AnchorPane>
       </content>
     </Tab>
@@ -80,7 +65,7 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <DatePicker id="szabadsagKezdete" fx:id="WorkerLeaveDateStart" layoutX="30.0" layoutY="72.0" prefHeight="26.0" prefWidth="530.0" />
+                  <DatePicker id="szabadsagKezdete" layoutX="30.0" layoutY="72.0" prefHeight="26.0" prefWidth="530.0" />
                   <Label layoutX="30.0" layoutY="52.0" text="Add meg a szabadság kezdetét:">
                      <font>
                         <Font name="Gentium Book Basic Italic" size="16.0" />
@@ -91,13 +76,13 @@
                         <Font name="Gentium Book Basic Italic" size="16.0" />
                      </font>
                   </Label>
-                  <DatePicker id="szabadsagVege" fx:id="WorkerLeaveDateEnd" layoutX="30.0" layoutY="143.0" prefHeight="26.0" prefWidth="530.0" />
+                  <DatePicker id="szabadsagVege" layoutX="30.0" layoutY="143.0" prefHeight="26.0" prefWidth="530.0" />
                   <ImageView fitHeight="182.0" fitWidth="226.0" layoutX="418.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                      </image>
                   </ImageView>
-                  <Button id="szabadsagKuldes" fx:id="SendLeaveID" layoutX="30.0" layoutY="186.0" mnemonicParsing="false" onAction="#SendLeave" style="-fx-background-color: #feec02;" text="Kérelem elküldése">
+                  <Button id="szabadsagKuldes" layoutX="30.0" layoutY="186.0" mnemonicParsing="false" style="-fx-background-color: #feec02;" text="Kérelem elküldése">
                      <font>
                         <Font name="Gentium Book Basic Bold" size="15.0" />
                      </font>
@@ -110,7 +95,7 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <DatePicker id="tappenzKezdete" fx:id="WorkerSickDayStart" layoutX="30.0" layoutY="72.0" prefHeight="26.0" prefWidth="530.0" />
+                  <DatePicker id="tappenzKezdete" layoutX="30.0" layoutY="72.0" prefHeight="26.0" prefWidth="530.0" />
                   <Label layoutX="30.0" layoutY="52.0" text="Add meg a táppénz kezdetét:">
                      <font>
                         <Font name="Gentium Book Basic Italic" size="16.0" />
@@ -121,13 +106,13 @@
                         <Font name="Gentium Book Basic Italic" size="16.0" />
                      </font>
                   </Label>
-                  <DatePicker id="tappenzVege" fx:id="WorkerSickDayEnd" layoutX="30.0" layoutY="143.0" prefHeight="26.0" prefWidth="530.0" />
+                  <DatePicker id="tappenzVege" layoutX="30.0" layoutY="143.0" prefHeight="26.0" prefWidth="530.0" />
                   <ImageView fitHeight="182.0" fitWidth="226.0" layoutX="418.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                      </image>
                   </ImageView>
-                  <Button id="tappenzKuldes" fx:id="WorkerSendSickPayID" layoutX="30.0" layoutY="186.0" mnemonicParsing="false" onAction="#WorkerSendSickPay" style="-fx-background-color: #feec02;" text="Bejelentés">
+                  <Button id="tappenzKuldes" layoutX="30.0" layoutY="186.0" mnemonicParsing="false" style="-fx-background-color: #feec02;" text="Bejelentés">
                      <font>
                         <Font name="Gentium Book Basic Bold" size="15.0" />
                      </font>

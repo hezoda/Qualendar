@@ -44,32 +44,32 @@
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <TextField id="vezeteknev" fx:id="AddNewWorkerFirstName" layoutX="14.0" layoutY="75.0" prefHeight="26.0" prefWidth="355.0" />
+            <TextField id="vezeteknev" layoutX="14.0" layoutY="75.0" prefHeight="26.0" prefWidth="355.0" />
             <Label layoutX="14.0" layoutY="108.0" text="Keresztnév">
                <font>
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <TextField id="keresztnev" fx:id="AddNewWorkerLastName" layoutX="14.0" layoutY="126.0" prefHeight="26.0" prefWidth="355.0" />
+            <TextField id="keresztnev" layoutX="14.0" layoutY="126.0" prefHeight="26.0" prefWidth="355.0" />
             <Label layoutX="14.0" layoutY="160.0" text="E-mail">
                <font>
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <TextField id="email" fx:id="AddNewWorkerEmail" layoutX="14.0" layoutY="178.0" prefHeight="26.0" prefWidth="355.0" />
+            <TextField id="email" layoutX="14.0" layoutY="178.0" prefHeight="26.0" prefWidth="355.0" />
             <Label layoutX="14.0" layoutY="211.0" text="Jelszó">
                <font>
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <PasswordField id="jelszo" fx:id="AddNewWorkerPassword" layoutX="14.0" layoutY="231.0" prefHeight="26.0" prefWidth="355.0" />
+            <PasswordField id="jelszo" layoutX="14.0" layoutY="231.0" prefHeight="26.0" prefWidth="355.0" />
             <Label layoutX="14.0" layoutY="266.0" text="Jelszó megerősítése">
                <font>
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <PasswordField id="jelszo2" fx:id="AddNewWorkerPasswordAgain" layoutX="14.0" layoutY="284.0" prefHeight="26.0" prefWidth="355.0" />
-            <Button id="addNewWorker" fx:id="AddNewWorkerID" layoutX="146.0" layoutY="358.0" mnemonicParsing="false" onAction="#AddNewWorker" style="-fx-background-color: #feec02;" text="Hozzáadás" textAlignment="CENTER">
+            <PasswordField id="jelszo2" layoutX="14.0" layoutY="284.0" prefHeight="26.0" prefWidth="355.0" />
+            <Button id="addNewWorker" layoutX="146.0" layoutY="358.0" mnemonicParsing="false" style="-fx-background-color: #feec02;" text="Hozzáadás" textAlignment="CENTER">
                <font>
                   <Font name="Gentium Book Basic Bold" size="15.0" />
                </font>
@@ -77,7 +77,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <RadioButton id="marketing" fx:id="PositionMarketing" layoutX="14.0" layoutY="328.0" mnemonicParsing="false" text="Marketing">
+            <RadioButton id="marketing" layoutX="14.0" layoutY="328.0" mnemonicParsing="false" text="Marketing">
                <font>
                   <Font name="Gentium Book Basic Italic" size="13.0" />
                </font>
@@ -85,17 +85,17 @@
                   <ToggleGroup fx:id="Working" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton id="konyvelo" fx:id="PositionKonyvelo" layoutX="95.0" layoutY="328.0" mnemonicParsing="false" text="Könyvelő" toggleGroup="$Working">
+            <RadioButton id="konyvelo" layoutX="95.0" layoutY="328.0" mnemonicParsing="false" text="Könyvelő" toggleGroup="$Working">
                <font>
                   <Font name="Gentium Book Basic Italic" size="13.0" />
                </font>
             </RadioButton>
-            <RadioButton id="emberiEroforrasok" fx:id="PositionEE" layoutX="171.0" layoutY="328.0" mnemonicParsing="false" text="Emberi erőforrások" toggleGroup="$Working">
+            <RadioButton id="emberiEroforrasok" layoutX="171.0" layoutY="328.0" mnemonicParsing="false" text="Emberi erőforrások" toggleGroup="$Working">
                <font>
                   <Font name="Gentium Book Basic Italic" size="13.0" />
                </font>
             </RadioButton>
-            <RadioButton id="kutato" fx:id="PositionKutato" layoutX="295.0" layoutY="328.0" mnemonicParsing="false" text="Kutató" toggleGroup="$Working">
+            <RadioButton id="kutato" layoutX="295.0" layoutY="328.0" mnemonicParsing="false" text="Kutató" toggleGroup="$Working">
                <font>
                   <Font name="Gentium Book Basic Italic" size="13.0" />
                </font>
