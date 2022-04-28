@@ -21,11 +21,35 @@
                   <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                </image>
             </ImageView>
-            <Text layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualendar -&#10;Szolgálati naptár&#10;" textAlignment="CENTER" wrappingWidth="210.7034912109375">
+            <Text layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualendar -&#10;Szolgálati naptár&#10;" textAlignment="CENTER" wrappingWidth="210.7034912109375">
                <font>
                   <Font name="Gentium Book Basic" size="29.0" />
                </font>
             </Text>
+            <ImageView fx:id="ExitButtonWorkerLogin" fitHeight="27.0" fitWidth="27.0" layoutX="170.0" layoutY="14.0" onMouseClicked="#ExitClickedWorkerLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Users/Greg/Desktop/x-close-icon-17.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="MaximizeButtonWorkerLogin" fitHeight="27.0" fitWidth="27.0" layoutX="143.0" layoutY="14.0" onMouseClicked="#MaximizeClickedWorkerLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Users/Greg/Desktop/Maximize-55.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="MinimizeButtonWorkerLogin" fitHeight="27.0" fitWidth="27.0" layoutX="116.0" layoutY="14.0" onMouseClicked="#MinimizeClickedWorkerLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Users/Greg/Desktop/Minimize-63.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
          </children>
       </AnchorPane>
    </right>

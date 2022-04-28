@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -16,49 +17,28 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="369.0" prefWidth="213.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="204.0" fitWidth="275.0" layoutX="14.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                </image>
             </ImageView>
-            <Text layoutX="4.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualendar -&#10;Szolgálati naptár&#10;" textAlignment="CENTER" wrappingWidth="210.9368281364441">
+            <Text layoutX="4.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualendar -&#10;Szolgálati naptár&#10;" textAlignment="CENTER" wrappingWidth="210.9368281364441">
                <font>
                   <Font name="Gentium Book Basic" size="29.0" />
                </font>
             </Text>
-            <ImageView fx:id="ExitButtonAddNewWorker" fitHeight="27.0" fitWidth="27.0" layoutX="177.0" layoutY="14.0" onMouseClicked="#ExitClickedAddNewWorker" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Users/Greg/Desktop/x-close-icon-17.jpg" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fx:id="MaximizeButtonAddNewWorker" fitHeight="27.0" fitWidth="27.0" layoutX="150.0" layoutY="14.0" onMouseClicked="#MaximizeClickedAddNewWorker" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Users/Greg/Desktop/Maximize-55.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fx:id="MinimizeButtonAddNewWorker" fitHeight="27.0" fitWidth="27.0" layoutX="123.0" layoutY="14.0" onMouseClicked="#MinimizeClickedAddNewWorker" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Users/Greg/Desktop/Minimize-63.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
+            <FontAwesomeIconView fill="#75e3ff" glyphName="CLOSE" layoutX="198.0" layoutY="18.0" size="16" />
+            <FontAwesomeIconView fill="#75e3ff" glyphName="CIRCLE" layoutX="176.0" layoutY="19.0" size="16" />
+            <FontAwesomeIconView fill="#75e3ff" glyphName="MINUS" layoutX="153.0" layoutY="19.0" size="16" />
          </children>
       </AnchorPane>
    </right>
    <left>
-      <AnchorPane prefHeight="400.0" prefWidth="383.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="334.0" prefWidth="383.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="87.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Új felhasználó hozzáadása">
+            <Text layoutX="87.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Új felhasználó hozzáadása">
                <font>
                   <Font name="Gentium Book Basic" size="19.0" />
                </font>
@@ -68,32 +48,32 @@
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="AddNewWorkerFirstName" layoutX="14.0" layoutY="75.0" prefHeight="26.0" prefWidth="355.0" />
+            <TextField id="vezeteknev" fx:id="AddNewWorkerFirstName" layoutX="14.0" layoutY="75.0" prefHeight="26.0" prefWidth="355.0" />
             <Label layoutX="14.0" layoutY="108.0" text="Keresztnév">
                <font>
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="AddNewWorkerLastName" layoutX="14.0" layoutY="126.0" prefHeight="26.0" prefWidth="355.0" />
+            <TextField id="keresztnev" fx:id="AddNewWorkerLastName" layoutX="14.0" layoutY="126.0" prefHeight="26.0" prefWidth="355.0" />
             <Label layoutX="14.0" layoutY="160.0" text="E-mail">
                <font>
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="AddNewWorkerEmail" layoutX="14.0" layoutY="178.0" prefHeight="26.0" prefWidth="355.0" />
+            <TextField id="email" fx:id="AddNewWorkerEmail" layoutX="14.0" layoutY="178.0" prefHeight="26.0" prefWidth="355.0" />
             <Label layoutX="14.0" layoutY="211.0" text="Jelszó">
                <font>
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <PasswordField fx:id="AddNewWorkerPassword" layoutX="14.0" layoutY="231.0" prefHeight="26.0" prefWidth="355.0" />
+            <PasswordField id="jelszo" fx:id="AddNewWorkerPassword" layoutX="14.0" layoutY="231.0" prefHeight="26.0" prefWidth="355.0" />
             <Label layoutX="14.0" layoutY="266.0" text="Jelszó megerősítése">
                <font>
                   <Font name="Gentium Book Basic" size="15.0" />
                </font>
             </Label>
-            <PasswordField fx:id="AddNewWorkerPasswordAgain" layoutX="14.0" layoutY="284.0" prefHeight="26.0" prefWidth="355.0" />
-            <Button fx:id="AddNewWorkerID" layoutX="146.0" layoutY="358.0" mnemonicParsing="false" onAction="#AddNewWorker" style="-fx-background-color: #feec02;" text="Hozzáadás" textAlignment="CENTER">
+            <PasswordField id="jelszo2" fx:id="AddNewWorkerPasswordAgain" layoutX="14.0" layoutY="284.0" prefHeight="26.0" prefWidth="355.0" />
+            <Button id="addNewWorker" fx:id="AddNewWorkerID" layoutX="146.0" layoutY="358.0" mnemonicParsing="false" onAction="#AddNewWorker" style="-fx-background-color: #feec02;" text="Hozzáadás" textAlignment="CENTER">
                <font>
                   <Font name="Gentium Book Basic Bold" size="15.0" />
                </font>
@@ -101,7 +81,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <RadioButton fx:id="PositionMarketing" layoutX="14.0" layoutY="328.0" mnemonicParsing="false" text="Marketing">
+            <RadioButton id="marketing" fx:id="PositionMarketing" layoutX="14.0" layoutY="328.0" mnemonicParsing="false" text="Marketing">
                <font>
                   <Font name="Gentium Book Basic Italic" size="13.0" />
                </font>
@@ -112,7 +92,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </RadioButton>
-            <RadioButton fx:id="PositionKonyvelo" layoutX="95.0" layoutY="328.0" mnemonicParsing="false" text="Könyvelő" toggleGroup="$Working">
+            <RadioButton id="konyvelo" fx:id="PositionKonyvelo" layoutX="95.0" layoutY="328.0" mnemonicParsing="false" text="Könyvelő" toggleGroup="$Working">
                <font>
                   <Font name="Gentium Book Basic Italic" size="13.0" />
                </font>
@@ -120,7 +100,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </RadioButton>
-            <RadioButton fx:id="PositionEE" layoutX="171.0" layoutY="328.0" mnemonicParsing="false" text="Emberi erőforrások" toggleGroup="$Working">
+            <RadioButton id="emberiEroforrasok" fx:id="PositionEE" layoutX="171.0" layoutY="328.0" mnemonicParsing="false" text="Emberi erőforrások" toggleGroup="$Working">
                <font>
                   <Font name="Gentium Book Basic Italic" size="13.0" />
                </font>
@@ -128,7 +108,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </RadioButton>
-            <RadioButton fx:id="PositionKutato" layoutX="295.0" layoutY="328.0" mnemonicParsing="false" text="Kutató" toggleGroup="$Working">
+            <RadioButton id="kutato" fx:id="PositionKutato" layoutX="295.0" layoutY="328.0" mnemonicParsing="false" text="Kutató" toggleGroup="$Working">
                <font>
                   <Font name="Gentium Book Basic Italic" size="13.0" />
                </font>
