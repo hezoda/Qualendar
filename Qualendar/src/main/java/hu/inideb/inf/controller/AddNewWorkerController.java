@@ -1,5 +1,6 @@
 package hu.inideb.inf.controller;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -7,6 +8,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 public class AddNewWorkerController {
 
@@ -29,6 +32,15 @@ public class AddNewWorkerController {
     private PasswordField AddNewWorkerPasswordAgain;
 
     @FXML
+    private ImageView ExitButtonAddNewWorker;
+
+    @FXML
+    private ImageView MaximizeButtonAddNewWorker;
+
+    @FXML
+    private ImageView MinimizeButtonAddNewWorker;
+
+    @FXML
     private RadioButton PositionEE;
 
     @FXML
@@ -45,6 +57,21 @@ public class AddNewWorkerController {
 
     @FXML
     void AddNewWorker(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ExitClickedAddNewWorker(MouseEvent event) {
+
+    }
+
+    @FXML
+    void MaximizeClickedAddNewWorker(MouseEvent event) {
+
+    }
+
+    @FXML
+    void MinimizeClickedAddNewWorker(MouseEvent event) {
 
     }
 

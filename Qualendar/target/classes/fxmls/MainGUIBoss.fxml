@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
@@ -35,7 +36,34 @@
                            <font>
                               <Font name="Gentium Book Basic Bold" size="16.0" />
                            </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Button>
+                        <ImageView fx:id="ExitButtonMainGUIBoss" fitHeight="27.0" fitWidth="27.0" layoutX="565.0" layoutY="10.0" onMouseClicked="#ExitClickedMainGUIBoss" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/x-close-icon-17.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="MaximizeButtonMainGUIBoss" fitHeight="27.0" fitWidth="27.0" layoutX="538.0" layoutY="10.0" onMouseClicked="#MaximizeClickedMainGUIBoss" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/Maximize-55.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="MinimizeButtonMainGUIBoss" fitHeight="27.0" fitWidth="27.0" layoutX="511.0" layoutY="10.0" onMouseClicked="#MinimizeClickedMainGUIBoss" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/Minimize-63.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
                      </children>
                   </AnchorPane>
             </content>

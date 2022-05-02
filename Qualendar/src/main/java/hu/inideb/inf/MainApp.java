@@ -11,12 +11,10 @@ public class MainApp extends Application{
 	@Override
     public void start(Stage stage) throws Exception {
 		System.out.println("Működöm");
-		
+	
 		FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxmls/MainGUI.fxml"));
-        Scene scene = new Scene((Parent) loader.load());
-        stage.setTitle("Main");
-        stage.setScene(scene);
-        stage.show();
+		Scene scene = new Scene((Parent) loader.load());			
+
 	}
 	
 	public static void main(String[] args) {

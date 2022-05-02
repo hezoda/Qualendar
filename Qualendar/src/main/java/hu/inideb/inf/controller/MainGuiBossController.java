@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 public class MainGuiBossController {
 
@@ -18,33 +20,59 @@ public class MainGuiBossController {
     private Label BossName;
 
     @FXML
-    private TableColumn<String, String> BossWorkerLeaveEnd;
+    private TableColumn<?, ?> BossWorkerLeaveEnd;
 
     @FXML
-    private TableColumn<String, String> BossWorkerLeaveName;
+    private TableColumn<?, ?> BossWorkerLeaveName;
 
     @FXML
-    private TableColumn<String, String> BossWorkerLeaveStart;
+    private TableColumn<?, ?> BossWorkerLeaveStart;
 
     @FXML
-    private TableColumn<String, String> BossWorkerSickDayEnd;
+    private TableColumn<?, ?> BossWorkerSickDayEnd;
 
     @FXML
-    private TableColumn<String, String> BossWorkerSickDayName;
+    private TableColumn<?, ?> BossWorkerSickDayName;
 
     @FXML
-    private TableColumn<String, String> BossWorkerSickDayStart;
+    private TableColumn<?, ?> BossWorkerSickDayStart;
 
     @FXML
-    private TableColumn<String, String> WorkerListEmail;
+    private ImageView ExitButtonMainGUIBoss;
 
     @FXML
-    private TableColumn<String, String> WorkerListName;
+    private ImageView MaximizeButtonMainGUIBoss;
 
     @FXML
-    private TableColumn<String, String> WorkerListPosition;
+    private ImageView MinimizeButtonMainGUIBoss;
+
+    @FXML
+    private TableColumn<?, ?> WorkerListEmail;
+
+    @FXML
+    private TableColumn<?, ?> WorkerListName;
+
+    @FXML
+    private TableColumn<?, ?> WorkerListPosition;
 
     @FXML
     void AddNewWorker(ActionEvent event) {
 
     }
+
+    @FXML
+    void ExitClickedMainGUIBoss(MouseEvent event) {
+
+    }
+
+    @FXML
+    void MaximizeClickedMainGUIBoss(MouseEvent event) {
+
+    }
+
+    @FXML
+    void MinimizeClickedMainGUIBoss(MouseEvent event) {
+
+    }
+
+}

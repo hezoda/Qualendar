@@ -1,5 +1,8 @@
 package hu.inudeb.inf.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Employee {
 	
 	private static String name;
