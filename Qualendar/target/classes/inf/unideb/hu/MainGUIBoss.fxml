@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4ea6d6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf.unideb.hu.controller.MainGuiBossController">
+   <left>
+      <TabPane prefHeight="400.0" prefWidth="616.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Kezdőlap">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Üdvözöllek a&#10;Qualendar - Szolgálati naptár&#10;Vezető beosztású felületén.&#10;Kattints a megfelelő fülre a&#10;folytatáshoz.">
+                           <font>
+                              <Font name="Gentium Book Basic" size="28.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="AddNewWorkerID" layoutX="14.0" layoutY="325.0" mnemonicParsing="false" onAction="#AddNewWorker" style="-fx-background-color: #feec02;" text="Új alkalmazott hozzáadása">
+                           <font>
+                              <Font name="Gentium Book Basic Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fx:id="ExitButtonMainGUIBoss" fitHeight="27.0" fitWidth="27.0" layoutX="565.0" layoutY="10.0" onMouseClicked="#ExitClickedMainGUIBoss" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/x-close-icon-17.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="MaximizeButtonMainGUIBoss" fitHeight="27.0" fitWidth="27.0" layoutX="538.0" layoutY="10.0" onMouseClicked="#MaximizeClickedMainGUIBoss" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/Maximize-55.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="MinimizeButtonMainGUIBoss" fitHeight="27.0" fitWidth="27.0" layoutX="511.0" layoutY="10.0" onMouseClicked="#MinimizeClickedMainGUIBoss" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/Minimize-63.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Személyes adatok">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="30.0" layoutY="43.0" text="Teljes név: ">
+                           <font>
+                              <Font name="Gentium Book Basic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="BossName" layoutX="110.0" layoutY="40.0" prefHeight="18.0" prefWidth="89.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="76.0" text="E-mail: ">
+                           <font>
+                              <Font name="Gentium Book Basic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="BossEmail" layoutX="81.0" layoutY="73.0" prefHeight="26.0" prefWidth="127.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Alkalmazottak">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView layoutX="12.0" layoutY="11.0" prefHeight="350.0" prefWidth="458.0">
+                          <columns>
+                            <TableColumn fx:id="WorkerListName" prefWidth="150.4000244140625" text="Teljes név" />
+                            <TableColumn fx:id="WorkerListEmail" prefWidth="141.5999755859375" text="E-mail" />
+                              <TableColumn fx:id="WorkerListPosition" minWidth="0.0" prefWidth="166.4000244140625" text="Beosztás" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Szabadságkérelmek">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="347.0" prefWidth="458.0">
+                          <columns>
+                            <TableColumn fx:id="BossWorkerLeaveName" prefWidth="149.5999755859375" text="Név" />
+                            <TableColumn fx:id="BossWorkerLeaveStart" prefWidth="147.20001220703125" text="Szabadság kezdete" />
+                              <TableColumn fx:id="BossWorkerLeaveEnd" prefWidth="161.5999755859375" text="Szabadság vége" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Táppénzkérelmek">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="346.0" prefWidth="456.0">
+                          <columns>
+                            <TableColumn fx:id="BossWorkerSickDayName" prefWidth="151.20001220703125" text="Név" />
+                            <TableColumn fx:id="BossWorkerSickDayStart" prefWidth="153.5999755859375" text="Táppénz kezdete" />
+                              <TableColumn fx:id="BossWorkerSickDayEnd" prefWidth="151.99993896484375" text="Táppénz vége" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </left>
+</BorderPane>

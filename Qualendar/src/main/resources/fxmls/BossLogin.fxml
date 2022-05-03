@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BossLoginController">
+   <right>
+      <AnchorPane prefHeight="402.0" prefWidth="178.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="210.0" fitWidth="221.0" layoutY="189.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="-1.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualendar -&#10;Szolgálati naptár&#10;" textAlignment="CENTER" wrappingWidth="210.7034912109375">
+               <font>
+                  <Font name="Gentium Book Basic" size="29.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="ExitButtonBossLogin" fitHeight="27.0" fitWidth="27.0" layoutX="170.0" layoutY="14.0" onMouseClicked="#ExitClickedBossLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Users/Greg/Desktop/x-close-icon-17.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="MaximizeButtonBossLogin" fitHeight="27.0" fitWidth="27.0" layoutX="143.0" layoutY="14.0" onMouseClicked="#MaximizeClickedBossLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Users/Greg/Desktop/Maximize-55.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="MinimizeButtonBossLogin" fitHeight="27.0" fitWidth="27.0" layoutX="116.0" layoutY="14.0" onMouseClicked="#MinimizeClickedBossLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Users/Greg/Desktop/Minimize-63.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="391.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="22.0" layoutY="81.0" prefHeight="26.0" prefWidth="154.0" text="Felhasználónév:">
+               <font>
+                  <Font name="Gentium Book Basic Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="161.0" text="Jelszó:">
+               <font>
+                  <Font name="Gentium Book Basic Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="BossLoginUsername" layoutX="22.0" layoutY="108.0" prefHeight="26.0" prefWidth="355.0" promptText="Felhasználónév" />
+            <PasswordField fx:id="BossLoginPassword" layoutX="23.0" layoutY="187.0" prefHeight="26.0" prefWidth="355.0" promptText="Jelszó" />
+            <Button fx:id="BossLoginID" layoutX="139.0" layoutY="248.0" mnemonicParsing="false" onAction="#BossLogin" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #feec02;" text="Bejelentkezés">
+               <font>
+                  <Font name="Gentium Book Basic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text layoutX="6.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vezető bejelentkezés">
+               <font>
+                  <Font name="Gentium Book Basic" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
