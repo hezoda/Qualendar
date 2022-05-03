@@ -1,14 +1,7 @@
 package hu.inudeb.inf.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
-@Entity
 public class Employee {
-	
-	@Id
-    @GeneratedValue
     private int id;
 	private static String name;
 	private static String schedule;
