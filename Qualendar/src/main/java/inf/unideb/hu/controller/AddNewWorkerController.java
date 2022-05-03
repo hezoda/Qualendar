@@ -1,5 +1,8 @@
 package inf.unideb.hu.controller;
 
+import java.io.IOException;
+
+import inf.unideb.hu.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -55,8 +58,11 @@ public class AddNewWorkerController {
     private ToggleGroup Working;
 
     @FXML
-    void AddNewWorker(ActionEvent event) {
-
+    void AddNewWorker(ActionEvent event) throws IOException {
+    		//TO-DO
+    	//hozzáadás után visszatér a MainGUIBoss ablakba
+    	App.setRoot("MainGuiBoss");
+    	
     }
 
     @FXML
