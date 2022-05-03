@@ -1,5 +1,8 @@
 package inf.unideb.hu.controller;
 
+import java.io.IOException;
+
+import inf.unideb.hu.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -56,8 +59,8 @@ public class MainGuiBossController {
     private TableColumn<?, ?> WorkerListPosition;
 
     @FXML
-    void AddNewWorker(ActionEvent event) {
-
+    void AddNewWorker(ActionEvent event) throws IOException {
+    	App.setRoot("AddNewWorker");
     }
 
     @FXML

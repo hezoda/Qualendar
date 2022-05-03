@@ -1,5 +1,9 @@
 package inf.unideb.hu.controller;
 
+import java.io.IOException;
+
+import inf.unideb.hu.App;
+import inf.unideb.hu.ValidateLogin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,8 +33,10 @@ public class BossLoginController {
     private ImageView MinimizeButtonBossLogin;
 
     @FXML
-    void BossLogin(ActionEvent event) {
-
+    void BossLogin(ActionEvent event) throws IOException {
+    		if(ValidateLogin.bossLoginValidate(BossLoginUsername.getText(),BossLoginPassword.getText())) {
+    			App.setRoot("MainGuiBoss");
+    		}
     }
 
     @FXML
