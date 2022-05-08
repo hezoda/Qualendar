@@ -60,6 +60,8 @@ public class AddNewWorkerController {
     @FXML
     void AddNewWorker(ActionEvent event) throws IOException {
     		//TO-DO
+    	
+    	
     	//hozzáadás után visszatér a MainGUIBoss ablakba
     	App.setRoot("MainGuiBoss");
     	
