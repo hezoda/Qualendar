@@ -7,6 +7,11 @@ public class Employee {
     private int id;
 	private static String name;
 	private static String schedule;
+	private static PositionType position;
+	
+	public enum PositionType{
+		Marketing, Konyvelo, EmberiEroforrasok,Kutato 
+	}
 
 	public int getId() {
 		return id;
@@ -40,5 +45,13 @@ public class Employee {
 	public static boolean sickPay() {
 		//TO-DO
 		return true;
+	}
+
+	public static PositionType getPosition() {
+		return position;
+	}
+
+	public static void setPosition(PositionType position) {
+		Employee.position = position;
 	}
 }
