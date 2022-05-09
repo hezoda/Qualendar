@@ -38,7 +38,7 @@ public class JPAEmployeeDAO implements EmployeeDAO {
 	}
 
 	@Override
-	public List<Employee> getEmployee(Employee emp) {
+	public List<Employee> getEmployee() {
 		TypedQuery<Employee> query = entityManager.createQuery("SELECT emp FROM Employee emp", Employee.class); //vagy valami ilyesmi kell
         List<Employee> employee = query.getResultList();
         return employee;
