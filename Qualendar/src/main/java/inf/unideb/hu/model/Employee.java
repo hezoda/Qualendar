@@ -1,16 +1,26 @@
 package inf.unideb.hu.model;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-
+@Entity
 public class Employee {
-
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 	private static String name;
 	private static String schedule;
+	
+	@Enumerated(EnumType.STRING)
 	private static PositionType position;
 	
 	public enum PositionType{
-		Marketing, Konyvelo, EmberiEroforrasok,Kutato 
+		Marketing, Konyvelo, EmberiEroforrasok,Kutato,NULL
 	}
 
 	public int getId() {
@@ -21,37 +31,37 @@ public class Employee {
 		this.id = id;
 	}
 
-	public static String getName() {
+	public String getName() {
 		return name;
 	}
 
-	public static void setName(String name) {
+	public void setName(String name) {
 		Employee.name = name;
 	}
 
-	public static String getSchedule() {
+	public String getSchedule() {
 		return schedule;
 	}
 
-	public static void setSchedule(String schedule) {
+	public void setSchedule(String schedule) {
 		Employee.schedule = schedule;
 	}
 	
-	public static boolean requestFreedom() {
+	public boolean requestFreedom() {
 		//TO-DO
 		return false;
 	}
 
-	public static boolean sickPay() {
+	public boolean sickPay() {
 		//TO-DO
 		return true;
 	}
 
-	public static PositionType getPosition() {
+	public PositionType getPosition() {
 		return position;
 	}
 
-	public static void setPosition(PositionType position) {
+	public void setPosition(PositionType position) {
 		Employee.position = position;
 	}
 }
