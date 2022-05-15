@@ -97,7 +97,21 @@ public class AddNewWorkerController {
     			Employee emp = new Employee();
     			emp.setName(sb.toString());
     			emp.setPosition(newWorkerPosition);
-    			emp.setSchedule("");
+                //Mettől meddig ki dolgozik
+                if(newWorkerPosition.equals(PositionType.Kutato)){
+                    emp.setSchedule("P - V : 08:00-17:00");
+                }
+                else if(newWorkerPosition.equals(PositionType.EmberiEroforrasok)){
+                    emp.setSchedule("H - P : 12:00 - 20:00");
+                }
+                else if(newWorkerPosition.equals(PositionType.Konyvelo)){
+                    emp.setSchedule("H , Sz , P : 08:00 - 20:00");
+                }
+                else if(newWorkerPosition.equals(PositionType.Marketing)){
+                    emp.setSchedule("H - V : 08:00 - 12:00");
+                }
+                emp.setPassword(newWorkerPassword);
+                emp.setEmail(newWorkerEmail);
     			
     			//mentés
     			try(JPAEmployeeDAO empDao = new JPAEmployeeDAO()){

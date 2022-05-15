@@ -18,6 +18,16 @@ public class Employee {
 	private String name;
 	private String email;
 	private String schedule;
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	private String password;
 	
 	@Enumerated(EnumType.STRING)
 	private PositionType position;
