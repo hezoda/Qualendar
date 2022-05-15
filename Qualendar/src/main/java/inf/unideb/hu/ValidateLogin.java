@@ -1,8 +1,6 @@
 package inf.unideb.hu;
 
 import inf.unideb.hu.model.Admin;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 public class ValidateLogin {
 	

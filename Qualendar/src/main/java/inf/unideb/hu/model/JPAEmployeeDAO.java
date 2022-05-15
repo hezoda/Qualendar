@@ -8,12 +8,13 @@ import javax.persistence.TypedQuery;
 
 public class JPAEmployeeDAO implements EmployeeDAO {
 
-	final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hu.inf.emp");
-    final EntityManager entityManager = entityManagerFactory.createEntityManager();
+	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hu.inf.emp");
+    EntityManager entityManager = entityManagerFactory.createEntityManager();
 	
 	@Override
 	public void close() throws Exception {
-		// TODO Auto-generated method stub
+		entityManager.close();
+		entityManagerFactory.close();
 	}
 
 	@Override

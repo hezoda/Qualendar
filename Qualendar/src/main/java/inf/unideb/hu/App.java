@@ -19,6 +19,7 @@ import org.h2.tools.Server;
 public class App extends Application {
 
     private static Scene scene;
+    private static Server s = new Server();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -48,7 +49,6 @@ public class App extends Application {
         stopDatabase();
     }
     
-    private static Server s = new Server();
     
     private static void startDatabase() throws SQLException {
         s.runTool("-tcp", "-web", "-ifNotExists");

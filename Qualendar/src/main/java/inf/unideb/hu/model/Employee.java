@@ -14,24 +14,24 @@ public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    private static Integer Id;
-	private static String name;
-	private static String email;
-	private static String schedule;
+    private long id;
+	private String name;
+	private String email;
+	private String schedule;
 	
 	@Enumerated(EnumType.STRING)
-	private static PositionType position;
+	private PositionType position;
 	
 	public enum PositionType{
 		Marketing, Konyvelo, EmberiEroforrasok,Kutato,NULL
 	}
 
-	public static int getId() {
-		return Id;
+	public long getId() {
+		return id;
 	}
 
 	public void setId(int id) {
-		this.Id = id;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -39,15 +39,15 @@ public class Employee {
 	}
 
 	public void setName(String name) {
-		Employee.name = name;
+		this.name = name;
 	}
 
-	public static String getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
-	public static void setEmail(String email) {
-		Employee.email = email;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getSchedule() {
@@ -55,7 +55,7 @@ public class Employee {
 	}
 
 	public void setSchedule(String schedule) {
-		Employee.schedule = schedule;
+		this.schedule = schedule;
 	}
 	
 	public boolean requestFreedom() {
@@ -73,6 +73,6 @@ public class Employee {
 	}
 
 	public void setPosition(PositionType position) {
-		Employee.position = position;
+		this.position = position;
 	}
 }
