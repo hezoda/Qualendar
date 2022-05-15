@@ -1,5 +1,8 @@
 package inf.unideb.hu.controller;
 
+import java.io.IOException;
+
+import inf.unideb.hu.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -44,8 +47,11 @@ public class WorkerLoginController {
     }
 
     @FXML
-    void WorkerLogin(ActionEvent event) {
-
+    void WorkerLogin(ActionEvent event) throws IOException {
+    	//csak hogy tovább lehessen haladni a munkával
+    	if(WorkerLoginUsername.getText().equals("test") && WorkerLoginPassword.getText().equals("test")) {
+    		App.setRoot("MainGUI");
+    	}
     }
 
 }

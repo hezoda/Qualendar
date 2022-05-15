@@ -7,6 +7,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.sql.SQLException;
+
+import org.h2.tools.Server;
 
 /**
  * JavaFX App
@@ -14,6 +19,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static Server s = new Server();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -33,7 +39,23 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+    	try {
+            startDatabase();
+        } catch (SQLException ex) {
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+            return;
+        }
         launch();
+        stopDatabase();
+    }
+    
+    
+    private static void startDatabase() throws SQLException {
+        s.runTool("-tcp", "-web", "-ifNotExists");
+    }
+
+    private static void stopDatabase()  {
+        s.shutdown();
     }
 
 }
