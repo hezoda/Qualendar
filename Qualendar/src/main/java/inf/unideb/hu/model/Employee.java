@@ -14,8 +14,9 @@ public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    private static int Id;
+    private static Integer Id;
 	private static String name;
+	private static String email;
 	private static String schedule;
 	
 	@Enumerated(EnumType.STRING)
@@ -39,6 +40,14 @@ public class Employee {
 
 	public void setName(String name) {
 		Employee.name = name;
+	}
+
+	public static String getEmail() {
+		return email;
+	}
+
+	public static void setEmail(String email) {
+		Employee.email = email;
 	}
 
 	public String getSchedule() {

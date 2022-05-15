@@ -8,7 +8,7 @@ import javax.persistence.TypedQuery;
 
 public class JPAEmployeeDAO implements EmployeeDAO {
 
-	final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hu.inf.emp");//kell bele a database neve
+	final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hu.inf.emp");
     final EntityManager entityManager = entityManagerFactory.createEntityManager();
 	
 	@Override

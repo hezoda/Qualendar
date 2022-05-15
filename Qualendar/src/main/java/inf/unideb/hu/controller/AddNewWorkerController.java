@@ -93,7 +93,7 @@ public class AddNewWorkerController {
     			
     			StringBuilder sb = new StringBuilder();
     			sb.append(newWorkerFirstname.substring(0,3));
-    			sb.append(newWorkerLastname.substring(0, 3));
+    			sb.append(newWorkerLastname.substring(0,3));
     			Employee emp = new Employee();
     			emp.setName(sb.toString());
     			emp.setPosition(newWorkerPosition);
