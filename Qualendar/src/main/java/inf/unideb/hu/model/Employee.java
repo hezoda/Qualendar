@@ -1,5 +1,7 @@
 package inf.unideb.hu.model;
 
+
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -12,7 +14,7 @@ public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private static int Id;
 	private static String name;
 	private static String schedule;
 	
@@ -23,12 +25,12 @@ public class Employee {
 		Marketing, Konyvelo, EmberiEroforrasok,Kutato,NULL
 	}
 
-	public int getId() {
-		return id;
+	public static int getId() {
+		return Id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.Id = id;
 	}
 
 	public String getName() {

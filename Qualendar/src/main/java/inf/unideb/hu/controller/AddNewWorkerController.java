@@ -110,7 +110,7 @@ public class AddNewWorkerController {
     	
     	
     	//hozzáadás után visszatér a MainGUIBoss ablakba
-    	
+    	//App.setRoot("MainGuiBoss");
     }
 
     @FXML

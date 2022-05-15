@@ -1,5 +1,8 @@
 package inf.unideb.hu.controller;
 
+import java.time.LocalDate;
+
+import inf.unideb.hu.model.Employee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -63,12 +66,27 @@ public class MainGuiController {
 
     @FXML
     void SendLeave(ActionEvent event) {
-
+    	LocalDate startDate = WorkerLeaveDateStart.getValue();
+    	LocalDate endDate = WorkerLeaveDateEnd.getValue();
+    	if(startDate.equals(null) || endDate.equals(null)) {
+    		//hibaüzenet ha nem választotta ki valamelyiket
+    	}
+    	else {
+    		//elküldeni a főnöknek
+    	}
     }
 
     @FXML
     void WorkerSendSickPay(ActionEvent event) {
-
+    	LocalDate startSick = WorkerSickDayStart.getValue();
+    	LocalDate endSick = WorkerLeaveDateEnd.getValue(); //bár nem tudod mikor gyógyulsz meg...
+    	
+    	if((!startSick.equals(null)) && endSick.equals(null)) {
+    		//elküldeni a főnöknek
+    	}
+    	else {
+    		//hibaüzenet
+    	}
     }
 
 }
