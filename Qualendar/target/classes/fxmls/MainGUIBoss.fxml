@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4ea6d6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainGuiBossController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4ea6d6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf.unideb.hu.controller.MainGuiBossController">
    <left>
       <TabPane prefHeight="400.0" prefWidth="616.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
@@ -64,6 +64,11 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
+                        <Button fx:id="BackMainGUIBoss" layoutX="502.0" layoutY="318.0" mnemonicParsing="false" onAction="#BackButtonMainGUIBoss" style="-fx-background-color: #feec02;" text="Vissza">
+                           <font>
+                              <Font name="Gentium Book Basic Bold" size="20.0" />
+                           </font>
+                        </Button>
                      </children>
                   </AnchorPane>
             </content>
@@ -110,7 +115,7 @@
                               <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                            </image>
                         </ImageView>
-                        <TableView layoutX="12.0" layoutY="11.0" prefHeight="350.0" prefWidth="458.0">
+                        <TableView fx:id="WorkersTable" layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="458.0">
                           <columns>
                             <TableColumn fx:id="WorkerListName" prefWidth="150.4000244140625" text="Teljes név" />
                             <TableColumn fx:id="WorkerListEmail" prefWidth="141.5999755859375" text="E-mail" />
@@ -121,7 +126,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="Szabadságkérelmek">
+            <Tab fx:id="FreedomTable" text="Szabadságkérelmek">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -130,7 +135,7 @@
                               <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                            </image>
                         </ImageView>
-                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="347.0" prefWidth="458.0">
+                        <TableView fx:id="FreedomTable" layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="458.0">
                           <columns>
                             <TableColumn fx:id="BossWorkerLeaveName" prefWidth="149.5999755859375" text="Név" />
                             <TableColumn fx:id="BossWorkerLeaveStart" prefWidth="147.20001220703125" text="Szabadság kezdete" />
@@ -150,7 +155,7 @@
                               <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                            </image>
                         </ImageView>
-                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="346.0" prefWidth="456.0">
+                        <TableView fx:id="SickPayTable" layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="458.0">
                           <columns>
                             <TableColumn fx:id="BossWorkerSickDayName" prefWidth="151.20001220703125" text="Név" />
                             <TableColumn fx:id="BossWorkerSickDayStart" prefWidth="153.5999755859375" text="Táppénz kezdete" />

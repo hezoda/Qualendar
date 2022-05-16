@@ -15,6 +15,10 @@ import javafx.scene.input.MouseEvent;
 
 public class BossLoginController {
 
+
+	@FXML
+	private Button BackBossLogin;
+
 	@FXML
 	private Button BossLoginID;
 
@@ -45,8 +49,13 @@ public class BossLoginController {
 		}
 
 		if (ValidateLogin.bossLoginValidate(BossLoginUsername.getText(), BossLoginPassword.getText())) {
-			App.setRoot("MainGuiBoss");
+			App.setRoot("MainGUIBoss");
 		}
+	}
+
+	@FXML
+	void BackButtonBossLogin(ActionEvent event) throws IOException {
+		App.setRoot("Main");
 	}
 
 	@FXML

@@ -8,16 +8,28 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 public class MainGuiBossController {
+    @FXML
+    private Button BackMainGUIBoss;
 
     @FXML
     private Button AddNewWorkerID;
 
     @FXML
     private Label BossEmail;
+
+    @FXML
+    private TableView<?> WorkersTable;
+
+    @FXML
+    private TableView<?> SickPayTable;
+
+    @FXML
+    private TableView<?> FreedomTable;
 
     @FXML
     private Label BossName;
@@ -76,6 +88,11 @@ public class MainGuiBossController {
     @FXML
     void MinimizeClickedMainGUIBoss(MouseEvent event) {
 
+    }
+
+    @FXML
+    void BackButtonMainGUIBoss(ActionEvent event) throws IOException {
+        App.setRoot("BossLogin");
     }
 
 }

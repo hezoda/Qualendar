@@ -52,6 +52,9 @@ public class AddNewWorkerController {
 	private RadioButton PositionKutato;
 
 	@FXML
+	private Button BackAddNewWorker;
+
+	@FXML
 	private RadioButton PositionMarketing;
 
 	@FXML
@@ -166,6 +169,12 @@ public class AddNewWorkerController {
     	//hozzáadás után visszatér a MainGUIBoss ablakba
     	//App.setRoot("MainGuiBoss");
     }
+
+
+	@FXML
+	void BackButtonAddNewWorker(ActionEvent event) throws IOException {
+		App.setRoot("MainGUIBoss");
+	}
 
 	@FXML
 	void ExitClickedAddNewWorker(MouseEvent event) {

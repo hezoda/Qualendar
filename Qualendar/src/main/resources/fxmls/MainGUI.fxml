@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4ea6d6;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainGuiController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4ea6d6;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf.unideb.hu.controller.MainGuiController">
   <tabs>
     <Tab text="Kezdőlap">
       <content>
@@ -42,6 +42,14 @@
                         <Image url="@../../Users/Greg/Desktop/Minimize-63.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="BackMainGUI" layoutX="502.0" layoutY="318.0" mnemonicParsing="false" onAction="#BackButtonMainGUI" style="-fx-background-color: #feec02;" text="Vissza">
+                     <font>
+                        <Font name="Gentium Book Basic Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children></AnchorPane>
       </content>
     </Tab>

@@ -1,7 +1,9 @@
 package inf.unideb.hu.controller;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
+import inf.unideb.hu.App;
 import inf.unideb.hu.model.Employee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +14,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 public class MainGuiController {
+
+    @FXML
+    private Button BackMainGUI;
 
     @FXML
     private ImageView ExitButtonMainGUI;
@@ -64,6 +69,10 @@ public class MainGuiController {
 
     }
 
+    @FXML
+    void BackButtonMainGUI(ActionEvent event) throws IOException {
+        App.setRoot("WorkerLogin");
+    }
     @FXML
     void SendLeave(ActionEvent event) {
     	LocalDate startDate = WorkerLeaveDateStart.getValue();
