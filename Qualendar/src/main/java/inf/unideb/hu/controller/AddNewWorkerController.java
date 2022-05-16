@@ -8,11 +8,7 @@ import inf.unideb.hu.model.Employee.PositionType;
 import inf.unideb.hu.model.JPAEmployeeDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
@@ -87,17 +83,61 @@ public class AddNewWorkerController {
     				|| newWorkerPasswordAgain.equals("")
     				|| newWorkerPosition.equals(PositionType.NULL)){
     			//Hiba üzenet készítése az admin számára
-    			//vizsgálni az emailt nevet stb stb helyességét
-    			
-    		}else if(newWorkerPassword.equals(newWorkerPasswordAgain)) {
-    			
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Regisztrációs hiba!");
+                alert.setHeaderText("Hiányos adat a regisztrációban!");
+                alert.setContentText("Minden mező kitöltése kötelező!");
+                alert.showAndWait();
+                App.setRoot("AddNewWorker");
+    		}
+            //vizsgálni az emailt nevet stb stb helyességét
+            else if(newWorkerFirstname.length() < 3){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Regisztrációs hiba!");
+                alert.setHeaderText("Hibás adat a regisztrációban");
+                alert.setContentText("Vezetéknév hossza legalább 3 karakter kell, hogy legyen!");
+                alert.showAndWait();
+                App.setRoot("AddNewWorker");
+            }
+            else if(newWorkerLastname.length() < 3){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Regisztrációs hiba!");
+                alert.setHeaderText("Hibás adat a regisztrációban");
+                alert.setContentText("Keresztnév hossza legalább 3 karakter kell, hogy legyen!");
+                alert.showAndWait();
+                App.setRoot("AddNewWorker");
+            }
+            else if(newWorkerPassword.equals(newWorkerPasswordAgain) == false){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Regisztrációs hiba!");
+                alert.setHeaderText("Hibás adat a regisztrációban");
+                alert.setContentText("Nem egyezik meg a két jelszó!");
+                alert.showAndWait();
+                App.setRoot("AddNewWorker");
+            }
+            else if(newWorkerPassword.equals(newWorkerPasswordAgain)) {
     			StringBuilder sb = new StringBuilder();
     			sb.append(newWorkerFirstname.substring(0,3));
     			sb.append(newWorkerLastname.substring(0,3));
     			Employee emp = new Employee();
     			emp.setName(sb.toString());
     			emp.setPosition(newWorkerPosition);
-    			emp.setSchedule("");
+
+                //Mettől meddig ki dolgozik
+                if(newWorkerPosition.equals(PositionType.Kutato)){
+                    emp.setSchedule("P - V : 08:00 - 17:00");
+                }
+                else if(newWorkerPosition.equals(PositionType.EmberiEroforrasok)){
+                    emp.setSchedule("H - P : 12:00 - 20:00");
+                }
+                else if(newWorkerPosition.equals(PositionType.Konyvelo)){
+                    emp.setSchedule("H , Sz , P : 08:00 - 20:00");
+                }
+                else if(newWorkerPosition.equals(PositionType.Marketing)){
+                    emp.setSchedule("H - V : 08:00 - 12:00");
+                }
+                emp.setPassword(newWorkerPassword);
+                emp.setEmail(newWorkerEmail);
     			
     			//mentés
     			try(JPAEmployeeDAO empDao = new JPAEmployeeDAO()){
