@@ -7,6 +7,7 @@ import inf.unideb.hu.App;
 import inf.unideb.hu.model.Employee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -74,27 +75,34 @@ public class MainGuiController {
         App.setRoot("WorkerLogin");
     }
     @FXML
-    void SendLeave(ActionEvent event) {
+    void SendLeave(ActionEvent event) throws IOException {
     	LocalDate startDate = WorkerLeaveDateStart.getValue();
     	LocalDate endDate = WorkerLeaveDateEnd.getValue();
-    	if(startDate.equals(null) || endDate.equals(null)) {
-    		//hibaüzenet ha nem választotta ki valamelyiket
-    	}
+        if(endDate == null || startDate == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Hiba!");
+            alert.setHeaderText("Nem lehet üres a szabadság vége és/vagy kezdete mező!");
+            alert.setContentText("Kérlek add meg a szabadság kezdetét és a végét újra!");
+            alert.showAndWait();
+            App.setRoot("MainGUI");
+        }
     	else {
-    		//elküldeni a főnöknek
     	}
     }
 
     @FXML
-    void WorkerSendSickPay(ActionEvent event) {
+    void WorkerSendSickPay(ActionEvent event) throws IOException {
     	LocalDate startSick = WorkerSickDayStart.getValue();
     	LocalDate endSick = WorkerLeaveDateEnd.getValue(); //bár nem tudod mikor gyógyulsz meg...
-    	
-    	if((!startSick.equals(null)) && endSick.equals(null)) {
-    		//elküldeni a főnöknek
-    	}
+        if(endSick == null || startSick == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Hiba!");
+            alert.setHeaderText("Nem lehet üres a táppénz vége és/vagy kezdete mező!");
+            alert.setContentText("Kérlek add meg a táppénz kezdetét és a végét újra!");
+            alert.showAndWait();
+            App.setRoot("MainGUI");
+        }
     	else {
-    		//hibaüzenet
     	}
     }
 
