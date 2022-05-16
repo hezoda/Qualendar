@@ -117,7 +117,12 @@ public class AddNewWorkerController {
                 App.setRoot("AddNewWorker");
             }
             else if(!isEmailValid(newWorkerEmail)){
-            	System.out.println("igen");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Regisztrációs hiba!");
+                alert.setHeaderText("Hibás adat a regisztrációban");
+                alert.setContentText("Rossz e-mail formátum!");
+                alert.showAndWait();
+                App.setRoot("AddNewWorker");
             }
             else if(newWorkerPassword.equals(newWorkerPasswordAgain)) {
     			StringBuilder sb = new StringBuilder();
@@ -178,9 +183,9 @@ public class AddNewWorkerController {
 	}
 
 	public static boolean isEmailValid(String email) {
-		final Pattern EMAILREGEX = Pattern.compile(
-				"[a-z0-9!#$%&'*+/=?^{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
-				Pattern.CASE_INSENSITIVE);
-		return EMAILREGEX.matcher(email).matches();
-	}
+        String ePattern = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\\\.[A-Za-z0-9-]+)*(\\\\.[A-Za-z]{2,})$";
+        java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+        java.util.regex.Matcher m = p.matcher(email);
+        return m.matches();
+    }
 }
