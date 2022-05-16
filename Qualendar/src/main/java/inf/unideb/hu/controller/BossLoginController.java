@@ -6,6 +6,7 @@ import inf.unideb.hu.App;
 import inf.unideb.hu.ValidateLogin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -34,9 +35,18 @@ public class BossLoginController {
 
     @FXML
     void BossLogin(ActionEvent event) throws IOException {
+        if((BossLoginUsername.getText().equals("admin") && BossLoginPassword.getText().equals("admin")) == false){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Bejelentkezési hiba!");
+            alert.setHeaderText("Hibás felhasználónév/jelszó!");
+            alert.setContentText("Kérlek próbáld újra!");
+            alert.showAndWait();
+            App.setRoot("BossLogin");
+        }
     		if(ValidateLogin.bossLoginValidate(BossLoginUsername.getText(),BossLoginPassword.getText())) {
     			App.setRoot("MainGuiBoss");
     		}
+
     }
 
     @FXML
