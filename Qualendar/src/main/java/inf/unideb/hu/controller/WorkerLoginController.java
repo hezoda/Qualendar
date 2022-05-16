@@ -3,6 +3,7 @@ package inf.unideb.hu.controller;
 import java.io.IOException;
 
 import inf.unideb.hu.App;
+import inf.unideb.hu.ValidateLogin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -48,8 +49,10 @@ public class WorkerLoginController {
 
     @FXML
     void WorkerLogin(ActionEvent event) throws IOException {
-    	//csak hogy tovább lehessen haladni a munkával
-    	if(WorkerLoginUsername.getText().equals("test") && WorkerLoginPassword.getText().equals("test")) {
+    	String username = WorkerLoginUsername.getText();
+    	String passwd = WorkerLoginPassword.getText();
+    	if(ValidateLogin.workerLoginValidate(username, passwd)) {
+    		System.out.println("belépett");
     		App.setRoot("MainGUI");
     	}
     }

@@ -1,6 +1,7 @@
 package inf.unideb.hu.controller;
 
 import java.io.IOException;
+import java.util.regex.Pattern;
 
 import inf.unideb.hu.App;
 import inf.unideb.hu.model.Employee;
@@ -14,49 +15,49 @@ import javafx.scene.input.MouseEvent;
 
 public class AddNewWorkerController {
 
-    @FXML
-    private TextField AddNewWorkerEmail;
+	@FXML
+	private TextField AddNewWorkerEmail;
 
-    @FXML
-    private TextField AddNewWorkerFirstName;
+	@FXML
+	private TextField AddNewWorkerFirstName;
 
-    @FXML
-    private Button AddNewWorkerID;
+	@FXML
+	private Button AddNewWorkerID;
 
-    @FXML
-    private TextField AddNewWorkerLastName;
+	@FXML
+	private TextField AddNewWorkerLastName;
 
-    @FXML
-    private PasswordField AddNewWorkerPassword;
+	@FXML
+	private PasswordField AddNewWorkerPassword;
 
-    @FXML
-    private PasswordField AddNewWorkerPasswordAgain;
+	@FXML
+	private PasswordField AddNewWorkerPasswordAgain;
 
-    @FXML
-    private ImageView ExitButtonAddNewWorker;
+	@FXML
+	private ImageView ExitButtonAddNewWorker;
 
-    @FXML
-    private ImageView MaximizeButtonAddNewWorker;
+	@FXML
+	private ImageView MaximizeButtonAddNewWorker;
 
-    @FXML
-    private ImageView MinimizeButtonAddNewWorker;
+	@FXML
+	private ImageView MinimizeButtonAddNewWorker;
 
-    @FXML
-    private RadioButton PositionEE;
+	@FXML
+	private RadioButton PositionEE;
 
-    @FXML
-    private RadioButton PositionKonyvelo;
+	@FXML
+	private RadioButton PositionKonyvelo;
 
-    @FXML
-    private RadioButton PositionKutato;
+	@FXML
+	private RadioButton PositionKutato;
 
-    @FXML
-    private RadioButton PositionMarketing;
+	@FXML
+	private RadioButton PositionMarketing;
 
-    @FXML
-    private ToggleGroup Working;
+	@FXML
+	private ToggleGroup Working;
 
-    @FXML
+	@FXML
     void AddNewWorker(ActionEvent event) throws IOException {
     	String newWorkerEmail = AddNewWorkerEmail.getText();
     	String newWorkerFirstname = AddNewWorkerFirstName.getText();
@@ -115,12 +116,20 @@ public class AddNewWorkerController {
                 alert.showAndWait();
                 App.setRoot("AddNewWorker");
             }
+            else if(!isEmailValid(newWorkerEmail)){
+            	System.out.println("igen");
+            }
             else if(newWorkerPassword.equals(newWorkerPasswordAgain)) {
     			StringBuilder sb = new StringBuilder();
     			sb.append(newWorkerFirstname.substring(0,3));
     			sb.append(newWorkerLastname.substring(0,3));
     			Employee emp = new Employee();
-    			emp.setName(sb.toString());
+    			StringBuilder sbFullName = new StringBuilder();
+    			sbFullName.append(newWorkerFirstname);
+    			sbFullName.append(" ");
+    			sbFullName.append(newWorkerLastname);
+    			emp.setFullName(sbFullName.toString());
+    			emp.setUserName(sb.toString());
     			emp.setPosition(newWorkerPosition);
 
                 //Mettől meddig ki dolgozik
@@ -153,19 +162,25 @@ public class AddNewWorkerController {
     	//App.setRoot("MainGuiBoss");
     }
 
-    @FXML
-    void ExitClickedAddNewWorker(MouseEvent event) {
+	@FXML
+	void ExitClickedAddNewWorker(MouseEvent event) {
 
-    }
+	}
 
-    @FXML
-    void MaximizeClickedAddNewWorker(MouseEvent event) {
+	@FXML
+	void MaximizeClickedAddNewWorker(MouseEvent event) {
 
-    }
+	}
 
-    @FXML
-    void MinimizeClickedAddNewWorker(MouseEvent event) {
+	@FXML
+	void MinimizeClickedAddNewWorker(MouseEvent event) {
 
-    }
+	}
 
+	public static boolean isEmailValid(String email) {
+		final Pattern EMAILREGEX = Pattern.compile(
+				"[a-z0-9!#$%&'*+/=?^{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
+				Pattern.CASE_INSENSITIVE);
+		return EMAILREGEX.matcher(email).matches();
+	}
 }
