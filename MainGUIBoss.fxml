@@ -115,7 +115,7 @@
                               <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                            </image>
                         </ImageView>
-                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="458.0">
+                        <TableView fx:id="WorkersTable" layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="458.0">
                           <columns>
                             <TableColumn fx:id="WorkerListName" prefWidth="150.4000244140625" text="Teljes név" />
                             <TableColumn fx:id="WorkerListEmail" prefWidth="141.5999755859375" text="E-mail" />
@@ -126,7 +126,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="Szabadságkérelmek">
+            <Tab fx:id="FreedomTable" text="Szabadságkérelmek">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -135,7 +135,7 @@
                               <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                            </image>
                         </ImageView>
-                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="458.0">
+                        <TableView fx:id="FreedomTable" layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="458.0">
                           <columns>
                             <TableColumn fx:id="BossWorkerLeaveName" prefWidth="149.5999755859375" text="Név" />
                             <TableColumn fx:id="BossWorkerLeaveStart" prefWidth="147.20001220703125" text="Szabadság kezdete" />
@@ -155,7 +155,7 @@
                               <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                            </image>
                         </ImageView>
-                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="458.0">
+                        <TableView fx:id="SickPayTable" layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="458.0">
                           <columns>
                             <TableColumn fx:id="BossWorkerSickDayName" prefWidth="151.20001220703125" text="Név" />
                             <TableColumn fx:id="BossWorkerSickDayStart" prefWidth="153.5999755859375" text="Táppénz kezdete" />
