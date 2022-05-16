@@ -16,14 +16,14 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="205.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="204.0" fitWidth="275.0" layoutX="14.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
                </image>
             </ImageView>
-            <Text layoutX="4.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualendar -&#10;Szolgálati naptár&#10;" textAlignment="CENTER" wrappingWidth="210.9368281364441">
+            <Text layoutX="123.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualendar -&#10;Szolgálati naptár&#10;" textAlignment="RIGHT" wrappingWidth="154.13684034347534">
                <font>
                   <Font name="Gentium Book Basic" size="29.0" />
                </font>
@@ -52,11 +52,16 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
+            <Button fx:id="BackAddNewWorker" layoutX="191.0" layoutY="347.0" mnemonicParsing="false" onAction="#BackButtonAddNewWorker" style="-fx-background-color: #feec02;" text="Vissza">
+               <font>
+                  <Font name="Gentium Book Basic Bold" size="20.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </right>
    <left>
-      <AnchorPane prefHeight="400.0" prefWidth="383.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="371.0" style="-fx-background-color: #4ea6d6;" BorderPane.alignment="CENTER">
          <children>
             <Text layoutX="87.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Új felhasználó hozzáadása">
                <font>

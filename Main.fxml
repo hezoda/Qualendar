@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="192.0" fitWidth="185.0" layoutX="415.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Users/Greg/Desktop/275917712_544614480247730_3347342849987388556_n.jpg" />
+            <Image url="@images/icon.jpg" />
          </image>
       </ImageView>
       <Label layoutX="418.0" layoutY="74.0" text="Qualendar - &#10;Szolgálati Naptár" textAlignment="CENTER">

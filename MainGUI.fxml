@@ -42,6 +42,14 @@
                         <Image url="@../../Users/Greg/Desktop/Minimize-63.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="BackMainGUI" layoutX="502.0" layoutY="318.0" mnemonicParsing="false" onAction="#BackButtonMainGUI" style="-fx-background-color: #feec02;" text="Vissza">
+                     <font>
+                        <Font name="Gentium Book Basic Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children></AnchorPane>
       </content>
     </Tab>
