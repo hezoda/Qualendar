@@ -52,7 +52,6 @@ public class WorkerLoginController {
     	String username = WorkerLoginUsername.getText();
     	String passwd = WorkerLoginPassword.getText();
     	if(ValidateLogin.workerLoginValidate(username, passwd)) {
-    		System.out.println("belépett");
     		App.setRoot("MainGUI");
     	}
     }

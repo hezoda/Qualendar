@@ -23,10 +23,7 @@ public class ValidateLogin {
 	public static boolean workerLoginValidate(String username, String password) {
 		boolean valid = false;
 		try (JPAEmployeeDAO empDao = new JPAEmployeeDAO()) {
-			
-			//TO-DO befejezni
-			for (Employee emp : empDao.getEmployee()) {
-				System.out.println(emp.getUserName());
+			for (Employee emp : empDao.getEmployee()) {	
 				if (emp.getUserName().equals(username)) {
 					System.out.println("username vizsgálva");
 					if (emp.getPassword().equals(password)) {
