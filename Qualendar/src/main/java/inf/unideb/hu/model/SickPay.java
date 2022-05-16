@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 public class SickPay {
 	
-	
 	private LocalDate start;
 	
 	private LocalDate end;
