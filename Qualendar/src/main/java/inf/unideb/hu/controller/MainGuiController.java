@@ -56,19 +56,13 @@ public class MainGuiController {
     private DatePicker WorkerSickDayStart;
 
     @FXML
-    void ExitClickedMainGUI(MouseEvent event) {
-
-    }
+    void ExitClickedMainGUI(MouseEvent event) {}
 
     @FXML
-    void MaximizeClickedMainGUI(MouseEvent event) {
-
-    }
+    void MaximizeClickedMainGUI(MouseEvent event) {}
 
     @FXML
-    void MinimizeClickedMainGUI(MouseEvent event) {
-
-    }
+    void MinimizeClickedMainGUI(MouseEvent event) {}
 
     @FXML
     void BackButtonMainGUI(ActionEvent event) throws IOException {
@@ -87,13 +81,15 @@ public class MainGuiController {
             App.setRoot("MainGUI");
         }
     	else {
-    	}
+            //Küldés
+            App.setRoot("MainGUI");
+        }
     }
 
     @FXML
     void WorkerSendSickPay(ActionEvent event) throws IOException {
     	LocalDate startSick = WorkerSickDayStart.getValue();
-    	LocalDate endSick = WorkerLeaveDateEnd.getValue(); //bár nem tudod mikor gyógyulsz meg...
+    	LocalDate endSick = WorkerSickDayEnd.getValue();//bár nem tudod mikor gyógyulsz meg...
         if(endSick == null || startSick == null){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Hiba!");
@@ -103,6 +99,8 @@ public class MainGuiController {
             App.setRoot("MainGUI");
         }
     	else {
+            //Küldés
+            App.setRoot("MainGUI");
     	}
     }
 
