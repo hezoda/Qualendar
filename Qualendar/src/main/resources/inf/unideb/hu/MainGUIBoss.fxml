@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4ea6d6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf.unideb.hu.controller.MainGuiBossController">
-   <left>
+   <top>
       <TabPane prefHeight="400.0" prefWidth="616.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
           <Tab text="Kezdőlap">
@@ -142,6 +142,11 @@
                               <TableColumn fx:id="BossWorkerLeaveEnd" prefWidth="161.5999755859375" text="Szabadság vége" />
                           </columns>
                         </TableView>
+                        <Button fx:id="SzabadsagFonokBeiras" layoutX="480.0" layoutY="331.0" mnemonicParsing="false" onAction="#SzabadsagGombFonokBeiras" style="-fx-background-color: #feec02;" text="Szabadság beírása">
+                           <font>
+                              <Font name="Gentium Book Basic" size="12.0" />
+                           </font>
+                        </Button>
                      </children>
                   </AnchorPane>
                </content>
@@ -162,11 +167,16 @@
                               <TableColumn fx:id="BossWorkerSickDayEnd" prefWidth="151.99993896484375" text="Táppénz vége" />
                           </columns>
                         </TableView>
+                        <Button fx:id="TappenzFonokBeiras" layoutX="480.0" layoutY="331.0" mnemonicParsing="false" onAction="#TappenzGombFonokBeiras" style="-fx-background-color: #feec02;" text="Táppénz beírása">
+                           <font>
+                              <Font name="Gentium Book Basic" size="12.0" />
+                           </font>
+                        </Button>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
         </tabs>
       </TabPane>
-   </left>
+   </top>
 </BorderPane>

@@ -1,8 +1,14 @@
 package inf.unideb.hu.controller;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Locale;
+import java.util.logging.Level;
 
 import inf.unideb.hu.App;
+import inf.unideb.hu.model.Employee;
+import inf.unideb.hu.model.Freedom;
+import inf.unideb.hu.model.SickPay;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,34 +29,40 @@ public class MainGuiBossController {
     private Label BossEmail;
 
     @FXML
-    private TableView<?> WorkersTable;
+    private Button SzabadsagFonokBeiras;
 
     @FXML
-    private TableView<?> SickPayTable;
+    private Button TappenzFonokBeiras;
 
     @FXML
-    private TableView<?> FreedomTable;
+    private TableView<Employee> WorkersTable;
+
+    @FXML
+    private TableView<SickPay> SickPayTable;
+
+    @FXML
+    private TableView<Freedom> FreedomTable;
 
     @FXML
     private Label BossName;
 
     @FXML
-    private TableColumn<?, ?> BossWorkerLeaveEnd;
+    private TableColumn<Freedom, LocalDate> BossWorkerLeaveEnd;
 
     @FXML
-    private TableColumn<?, ?> BossWorkerLeaveName;
+    private TableColumn<Freedom, String> BossWorkerLeaveName;
 
     @FXML
-    private TableColumn<?, ?> BossWorkerLeaveStart;
+    private TableColumn<Freedom, LocalDate> BossWorkerLeaveStart;
 
     @FXML
-    private TableColumn<?, ?> BossWorkerSickDayEnd;
+    private TableColumn<SickPay, LocalDate> BossWorkerSickDayEnd;
 
     @FXML
-    private TableColumn<?, ?> BossWorkerSickDayName;
+    private TableColumn<SickPay, String> BossWorkerSickDayName;
 
     @FXML
-    private TableColumn<?, ?> BossWorkerSickDayStart;
+    private TableColumn<SickPay, LocalDate> BossWorkerSickDayStart;
 
     @FXML
     private ImageView ExitButtonMainGUIBoss;
@@ -62,13 +74,13 @@ public class MainGuiBossController {
     private ImageView MinimizeButtonMainGUIBoss;
 
     @FXML
-    private TableColumn<?, ?> WorkerListEmail;
+    private TableColumn<Employee, String> WorkerListEmail;
 
     @FXML
-    private TableColumn<?, ?> WorkerListName;
+    private TableColumn<Employee, String> WorkerListName;
 
     @FXML
-    private TableColumn<?, ?> WorkerListPosition;
+    private TableColumn<Employee, String> WorkerListPosition;
 
     @FXML
     void AddNewWorker(ActionEvent event) throws IOException {
@@ -93,6 +105,16 @@ public class MainGuiBossController {
     @FXML
     void BackButtonMainGUIBoss(ActionEvent event) throws IOException {
         App.setRoot("BossLogin");
+    }
+
+    @FXML
+    void SzabadsagGombFonokBeiras(ActionEvent event) throws IOException {
+        App.setRoot("SendLeave");
+    }
+
+    @FXML
+    void TappenzGombFonokBeiras(ActionEvent event) throws IOException {
+        App.setRoot("SendSickPay");
     }
 
 }

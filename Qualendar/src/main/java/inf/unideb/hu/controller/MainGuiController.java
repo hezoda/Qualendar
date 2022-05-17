@@ -82,6 +82,7 @@ public class MainGuiController {
         }
     	else {
             //Küldés
+            System.out.println(startDate.getClass().getSimpleName());
             App.setRoot("MainGUI");
         }
     }
