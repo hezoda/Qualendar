@@ -14,7 +14,7 @@ A célunk az, hogy kényelmesebbé tegyük a dolgozók naptárait és egy alkalm
 
 ## Verziószám
 
-0.2.5
+0.3.5
 
 ## Fejlesztők
 
