@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4ea6d6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SendSickPayController">
+   <children>
+      <Label layoutX="244.0" layoutY="31.0" text="Táppénz beírás">
+         <font>
+            <Font name="Gentium Book Basic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TappenzNev" layoutX="26.0" layoutY="87.0" prefHeight="26.0" prefWidth="537.0" />
+      <TextField fx:id="TappenzEmail" layoutX="27.0" layoutY="152.0" prefHeight="26.0" prefWidth="538.0" />
+      <Label layoutX="27.0" layoutY="67.0" text="Teljes név">
+         <font>
+            <Font name="Gentium Book Basic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="135.0" text="E-mail cím">
+         <font>
+            <Font name="Gentium Book Basic" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="TappenzKezdet" layoutX="26.0" layoutY="218.0" prefHeight="26.0" prefWidth="538.0" />
+      <DatePicker fx:id="TappenzVeg" layoutX="27.0" layoutY="282.0" prefHeight="26.0" prefWidth="538.0" />
+      <Label layoutX="27.0" layoutY="200.0" text="Táppénz kezdete">
+         <font>
+            <Font name="Gentium Book Basic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="262.0" text="Táppénz vége">
+         <font>
+            <Font name="Gentium Book Basic" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="TappenzTarol" layoutX="258.0" layoutY="323.0" mnemonicParsing="false" onAction="#TappenzGombTarol" style="-fx-background-color: #feec02;" text="Eltárol">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="BackTappenz" layoutX="26.0" layoutY="19.0" mnemonicParsing="false" onAction="#BackButtonTappenz" style="-fx-background-color: #feec02;" text="Vissza">
+         <font>
+            <Font name="Gentium Book Basic" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
